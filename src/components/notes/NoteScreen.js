@@ -22,7 +22,7 @@ export const NoteScreen = () => {
       <div className="notes__image">
         <img 
           src="https://en.free-wallpapers.su/data/media/13/big/com0542.jpg"
-          alt="image"
+          alt="note"
         />
 
       </div>

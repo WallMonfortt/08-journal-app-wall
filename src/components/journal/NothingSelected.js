@@ -10,7 +10,7 @@ export const NothingSelected = () => {
       or create an entry!
     </p>
 
-    <i class="fas fa-crown fa-4x mt-5"></i>
+    <i className="fas fa-crown fa-4x mt-5"></i>
       
     </div>
   )

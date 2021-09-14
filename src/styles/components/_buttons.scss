@@ -21,12 +21,12 @@
 .btn-primary{
   background-color: $primary;
   border-radius: 5px;
-
-  &:disabled{
-    background-color: lighten($color: $primary, $amount: 1);
-  }
+  
   &:hover{
     background-color: darken($color: $primary, $amount: 15);
+  }
+  &:disabled{
+    background-color: lighten($color: $primary, $amount: 10);
   }
 }
 
