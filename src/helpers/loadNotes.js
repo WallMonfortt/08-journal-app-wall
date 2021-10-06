@@ -2,8 +2,6 @@ import { db } from "../firebase/firebase-config"
 import {collection, getDocs} from 'firebase/firestore'
 
 
-
-
 export const loadNotes = async(uid) =>{
   const notesSnap = await getDocs(collection(db, `${uid}/journal/notes`));
   const notes = [];
@@ -14,6 +12,10 @@ export const loadNotes = async(uid) =>{
       ...snapSon.data()
     })
   });
-
+  
+  notes.sort(function(a,b){
+    return new Date(b.date) - new Date(a.date);
+  });
+  
   return notes;
 }

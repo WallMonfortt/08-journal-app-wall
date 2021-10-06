@@ -10,6 +10,7 @@ import {
 } from "firebase/auth";
 import { types } from "../types/types";
 import { finishLoading, startLoading } from "./ui";
+import { noteLogout } from "./notes";
 
 const auth = getAuth();
 
@@ -77,7 +78,8 @@ export const startLogout = () =>{
   return (dispatch) => {
     signOut(auth)
 
-    dispatch( logout())
+    dispatch( logout());
+    dispatch( noteLogout());
   }
 }
 

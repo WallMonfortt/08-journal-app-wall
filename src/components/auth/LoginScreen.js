@@ -49,7 +49,10 @@ export const LoginScreen = () => {
     <>
       <h3 className="auth__tittle">Login</h3>
 
-      <form onSubmit={handleLogin}>
+      <form 
+        onSubmit={handleLogin}
+        className="animate__animated animate__fadeIn animate__faster"  
+      >
         <input
           type="text"
           placeholder="Email"
@@ -58,6 +61,7 @@ export const LoginScreen = () => {
           autoComplete="no"
           value={email}
           onChange={handleInputChange}
+          autoFocus="on"
         />
         <input
           type="password"
@@ -84,7 +88,7 @@ export const LoginScreen = () => {
             <div className="google-icon-wrapper">
               <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
             </div>
-            <p className="btn-text">
+            <p className="btn-text" >
               <b>Sign in with google</b>
             </p>
           </div>

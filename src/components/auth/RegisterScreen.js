@@ -57,7 +57,10 @@ export const RegisterScreen = () => {
     <>
       <h3 className="auth__tittle">Register</h3>
 
-      <form onSubmit={handleRegister}>
+      <form 
+        onSubmit={handleRegister}
+        className="animate__animated animate__fadeIn animate__faster"
+      >
         <input
           type="name"
           placeholder="Name"
@@ -66,6 +69,7 @@ export const RegisterScreen = () => {
           autoComplete="no"
           value={name}
           onChange={handleInputChange}
+          autoFocus="on"
         />
         <input
           type="text"
@@ -109,7 +113,7 @@ export const RegisterScreen = () => {
             <div className="google-icon-wrapper">
               <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
             </div>
-            <p className="btn-text">
+            <p className="btn-text" >
               <b>Register with google</b>
             </p>
           </div>

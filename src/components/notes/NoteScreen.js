@@ -46,6 +46,7 @@ export const NoteScreen = () => {
         value={ title }
         onChange={handleInputChange}
       />
+      <hr/>
       <textarea
         placeholder="What happened today??"
         name="body"
@@ -59,7 +60,7 @@ export const NoteScreen = () => {
         (<div className="notes__image">
         <img 
           src={note.url}
-          alt="image"
+          alt="note img"
         />
         </div>)
       }
